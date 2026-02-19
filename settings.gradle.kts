@@ -1,0 +1,1 @@
+rootProject.name = "TascaS1.07.Annotations"
