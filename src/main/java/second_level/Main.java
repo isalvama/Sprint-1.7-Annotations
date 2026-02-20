@@ -8,14 +8,13 @@ public class Main {
         JsonFileSaver.saveObjectInJsonFile(worker);
 
         try{
-            Class aClass = OnlineWorker.class;
+            Class<OnlineWorker> aClass = OnlineWorker.class;
             Annotation[] annotations = aClass.getAnnotations();
 
             for (Annotation annotation : annotations){
-                if (annotation instanceof ToJsonFile){
-                    ToJsonFile toJsonAnnotation = (ToJsonFile) annotation;
+                if (annotation instanceof ToJsonFile toJsonAnnotation){
                     System.out.println("name: " + toJsonAnnotation.annotationType());
-                    System.out.println("value: " + toJsonAnnotation.toString());
+                    System.out.println("value: " + toJsonAnnotation);
                 }
             }
         } catch (Exception e) {
