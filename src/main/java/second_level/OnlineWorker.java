@@ -1,8 +1,6 @@
 package second_level;
 
-import first_level.Worker;
-
-@ToJsonFile(directoryPath = "")
+@ToJsonFile(directoryPath = "Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource(\"\")).getPath();")
 public class OnlineWorker extends Worker {
     private int priceMaterialPerHour;
     private static final double INTERNET_FLAT_RATE_PRICE = 9;
@@ -10,6 +8,10 @@ public class OnlineWorker extends Worker {
     public OnlineWorker(String name, String surname, int pricePerHour, int priceMaterialPerHour) {
         super(name, surname, pricePerHour);
         this.priceMaterialPerHour = priceMaterialPerHour;
+    }
+
+    public int getPriceMaterialPerHour() {
+        return priceMaterialPerHour;
     }
 
     @Override
