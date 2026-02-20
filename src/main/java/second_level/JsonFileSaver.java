@@ -5,14 +5,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Objects;
 
 public class JsonFileSaver {
 
     public static void saveObjectInJsonFile(Object object) {
         if (object.getClass().isAnnotationPresent(ToJsonFile.class)) {
             ToJsonFile annotation = object.getClass().getAnnotation(ToJsonFile.class);
-            String outputFileDirectoryPath = annotation.directoryPath(); // TODO
+            String outputFileDirectoryPath = annotation.directoryPath();
             try {
                 String objInJson = convertObjToJson(object);
                 try {
