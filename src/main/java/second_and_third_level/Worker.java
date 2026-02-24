@@ -1,4 +1,4 @@
-package second_level;
+package second_and_third_level;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

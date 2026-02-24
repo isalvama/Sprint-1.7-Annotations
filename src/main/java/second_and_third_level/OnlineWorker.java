@@ -1,4 +1,4 @@
-package second_level;
+package second_and_third_level;
 
 @ToJsonFile(directoryPath = "Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource(\"\")).getPath();")
 public class OnlineWorker extends Worker {
