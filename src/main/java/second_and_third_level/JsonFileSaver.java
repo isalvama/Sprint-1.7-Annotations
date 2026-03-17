@@ -18,8 +18,9 @@ public class JsonFileSaver {
             } catch (RuntimeException | IOException e) {
                 System.err.println(e.getMessage());
             }
+        } else {
+            System.out.println("The object passed as parameter does not belong to a class with the ToJsonFile annotation.");
         }
-        System.out.println("The object passed as parameter does not belong to a class with the ToJsonFile annotation.");
     }
 
     private static String convertObjToJsonStr(Object object) throws JsonProcessingException {
