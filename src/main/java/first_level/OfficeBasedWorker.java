@@ -34,7 +34,7 @@ public class OfficeBasedWorker extends Worker {
         if (increaseInPrice < 0){
             throw new IllegalArgumentException("The gas price increase can not be negative");
         }
-        gasPrice += increaseInPrice ;
+        gasPrice += increaseInPrice;
     }
 
     public static void decreaseGasPrice(double decreaseInPrice){
@@ -44,7 +44,7 @@ public class OfficeBasedWorker extends Worker {
         if (decreaseInPrice > 0){
             throw new IllegalArgumentException("The gas price increase can not be positive");
         }
-        gasPrice -= decreaseInPrice ;
+        gasPrice -= decreaseInPrice;
     }
 
     @Override

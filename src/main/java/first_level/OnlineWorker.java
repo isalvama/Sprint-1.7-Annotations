@@ -8,19 +8,19 @@ public class OnlineWorker extends Worker{
     }
 
     @Override
-    public double calculateSalary(double nWorkedHours){
-        return (this.getPricePerHour() * nWorkedHours) + INTERNET_FLAT_RATE_PRICE;
+    public double calculateSalary(double workedHours){
+        return (this.getPricePerHour() * workedHours) + INTERNET_FLAT_RATE_PRICE;
     }
 
     /**
      *This method calculates the hours without taking into account the Internet plus.
      * @deprecated This method is obsolete.
      * Use {@link #calculateSalary(double)} instead to include the internet bonus.
-     * @param nWorkedHours number of hours the employer has worked
+     * @param workedHours number of hours the employer has worked
      * @return the salary without extras
      */
     @Deprecated
-    public double calculateBasicSalary(double nWorkedHours){
-        return this.getPricePerHour() * nWorkedHours;
+    public double calculateBasicSalary(double workedHours){
+        return this.getPricePerHour() * workedHours;
     }
 }
