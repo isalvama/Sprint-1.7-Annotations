@@ -15,14 +15,14 @@ public class OnlineWorkerTest implements WithAssertions {
     }
 
     @Test
-    @DisplayName("An assertion that demonstrates that calculateSalary method returns an expected value") //TODO
+    @DisplayName("An assertion that demonstrates that calculateSalary method returns an expected value")
     void calculateSalary_whenPassingNumOfHours_returnsExpectedValue() {
         assertThat(onlineWorker.calculateSalary(8)).isEqualTo(169);
     }
 
     @Test
-    @DisplayName("An assertion that demonstrates that calculateBasicSalary method has @Deprecated annotation") //TODO
-    void calculateBasicSalary_hasDepracatedAnnotation_returnsTrue() throws NoSuchMethodException {
+    @DisplayName("An assertion that demonstrates that calculateBasicSalary method has @Deprecated annotation")
+    void calculateBasicSalary_hasDeprecatedAnnotation_returnsTrue() throws NoSuchMethodException {
         Method method = OnlineWorker.class.getDeclaredMethod("calculateBasicSalary", double.class);
         assertThat(method.isAnnotationPresent(Deprecated.class)).isTrue();
         assertThat(method.getAnnotation(Deprecated.class)).isNotNull();
