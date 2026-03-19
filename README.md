@@ -1,4 +1,4 @@
-# Tasca S1 01: Java Annotations
+# Sprint 1.7: Java Annotations
 
 ## Description
 
